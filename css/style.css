@@ -1,0 +1,128 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #ddd;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1{
+    font-size: 50px;
+    line-height: 1;
+    padding: 50px 0;
+    text-align: center;
+}
+nav li{
+    display:inline;
+    padding-right:20px;
+  }
+
+nav a{
+    color: black;
+    font-weight: bold;
+    text-decoration: none; 
+  }
+
+nav a:hover{
+    color: blue;
+    text-decoration: underline;
+  }
+  .skip a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+    position: absolute;
+    top:-40px
+  }
+
+
+img{
+    height: 300px;
+    align-items: center;
+}
+
+footer{
+    background-color: #2e1114;
+    color: white;
+    grid-column: 1 / -1;  /*Can you explain what this does?*/
+    grid-row: 7 / auto;   /*Can you rewrite it?*/
+    padding-top: 20px;
+    text-align: center;
+  }
+
+  nav{
+    background-color: #ddd;
+    padding: 20px 0; 
+    text-align: left;
+    grid-column: 1 / -1;
+    grid-row: 1 / span 1;
+    /*Your code here*/
+    /*Span the top row*/
+  
+  }
+
+  header{
+    background-color: #64485C;
+    background-image: url("../images/header.jpg");
+    background-attachment: fixed; /* Parallax effect */     
+    background-position: center;  /* Parallax effect */
+    background-repeat: no-repeat; /* Parallax effect */
+    background-size: cover;       /* Parallax effect */
+    color:#adadad;
+    height: 200px;                /* Parallax effect */
+    /* Your code here */
+    /* Set background-image to header.jpg in the images folder */
+    /* Span one row */
+    grid-column: 1/-1;
+    /* /* Spans all of the columns. */
+    grid-row: 2 /span 1;
+  /* Begins on 2nd row and spans 1 row.*/ 
+  /* Header uses header.jpg as a non-repeating*/
+  }
+
+  container{
+    display: grid;
+    align-content: center;
+    grid-template-columns: 400px 400px;
+    grid-template-rows: 30px 100px;
+    grid-row-gap:25px;
+    /*Your code here  */
+    /* See documentation for mobile view */
+  }
+     .img-one, .img-two, .img-three, .img-four{ 
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      align-items: center;
+    
+      grid-column: 2 /span 1; 
+      grid-row: 3/span 1;
+  }
+
+     /* .img-one, .img-two, .img-three, .img-four{
+     grid-column: 1/-1;
+     max-height: 700px; */
+     /* overflow: hidden; */
+  }
+  
+
+  @media all and (min-width: 800px){
+
+    .container{
+      display: grid;
+        grid-template-columns: 50px auto 50px;
+      /* grid-template-columns: 50px auto 500px auto 50px; */
+
+      /* grid-template-rows: 70px 400px 400px 400px 400px 400px 100px; */
+    /*Your code here */
+    /* See documentation for desktop view */ 
+    /* Five columns: 50px, auto, 500px, auto, and  50px
+  Seven rows: 70px, 400px, 400px, 400px, 400px, 400px, and 100px.  */
+  }
+}
