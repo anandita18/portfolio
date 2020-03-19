@@ -1,136 +1,92 @@
 <!DOCTYPE html>
-
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>Portfolio Project</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">    
   </head>
   <body>
   <header>
-      <nav>
-          <li> <a href= "about.html"> About </a> </li>
-              <li> <a href= "index.html"> Work  </a> </li>
-              <li> <a href= "photography.html "> Photography </a> </li>
-              <li> <a href= "resume.html "> Resume  </a> </li> 
-              <li> <a href= "contact.html "> Contact </a> </li>
-        </nav>
-        <h1>Anandita Aggarwal</h1>
-      </header>
-      <style>
-        * {
-          box-sizing: border-box;
-        }
-        
-        body {
-          background-color: #f1f1f1;
-          padding: 20px;
-          font-family: Arial;
-        }
-        
-        /* Center website */
-        .main {
-          max-width: 1000px;
-          margin: auto;
-        }
-        
-        h1 {
-          font-size: 50px;
-          word-break: break-all;
-        }
-        
-        .row {
-          margin: 8px -16px;
-        }
-        
-        /* Add padding BETWEEN each column */
-        .row,
-        .row > .column {
-          padding: 8px;
-        }
-        
-        /* Create four equal columns that floats next to each other */
-        .column {
-          float: left;
-          width: 25%;
-        }
-        
-        /* Clear floats after rows */ 
-        .row:after {
-          content: "";
-          display: table;
-          clear: both;
-        }
-        
-        /* Content */
-        .content {
-          background-color: white;
-          padding: 10px;
-        }
-        .grid > * {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-        /* Responsive layout - makes a two column-layout instead of four columns */
-        @media screen and (max-width: 900px) {
-          .column {
-            width: 50%;
-          }
-        }
-        
-        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-        @media screen and (max-width: 600px) {
-          .column {
-            width: 100%;
-          }
-        }
-        </style>
-        </head>
-        <body>
-        
-        <!-- MAIN (Center website) -->
-        <div class="main">
-        
-        <hr>
-        
-        <h2>PORTFOLIO</h2>
-        <p>These are some of the UX Projects I have worked on</p>
-        
-        
-        <div class="content">
-          <img src="images/refugees.jpg" alt="UX Research: Connecting resources for refugees">
-          <h3> UX Research: Connecting resources for refugees</h3>
-          <p>For this project, our client was Office of Global Michigan. 
-            This office supports immigrant and refugee integration initiatives for the state. 
-            Currently, there are voids in the information that the Office of Global Michigan is collecting on refugee services.
-            In order to provide better support, they need to find out how refugees are accessing mainstream services and the challenges they face when navigating the systems that host these services.  </p>
-        </div>
-        <div class="content">
-          <img src="images/system_design.png" alt="Systems Design: Paperless Receipts">
-          <h3> Systems Design: Paperless Receipts</h3>
-          <p>Receipts are a commonly overlooked part of a customer’s shopping experience, and often end up lost or in the garbage. This makes returns, exchanges, and any other post transaction interactions more difficult for both the business and the consumers. With the increasing popularity of Apple Pay, consumers are beginning to use mobile payments more often. With the new interaction of mobile devices with POS systems, there are many new opportunities to be explored. We believe we have a solution to make Apple Pay more intuitive and seamless for both the consumer and the business by essentially eliminating paper receipts.
-              In response to this problem, our team developed a system with the vision of moving away from paper receipts, in favor of virtual receipts. Sponsored by Apple’s virtual payment division, Apply Pay, our team developed this system with the intentions of it becoming an eventual local feature of Apple Pay. </p>
-        </div>
-        
-        <div class="content">
-          <img src="images/contextual.jpeg" alt="UX Design: Safety Nav">
-          <h3>UX Design: Safety Nav</h3>
-          <p>My first time solo-traveling, and navigating through an unfamiliar city wasn’t easy. Seeing multiple crime alerts, and reading horror stories online made it difficult to predict which areas to avoid. 
-            Therefore, I decided to explore the area of travel safety. With the project timeline in mind and with a focus on travelers who choose to walk, I selected young solo travelers between the ages of 18-35 as my primary audience. 
-            I developed a mobile prototype as my final project for the School of Information Course "SI 582: Introduction to Interaction Design." 
-            Throughout this course, alongside fundamental readings about the design process and best practices, I worked towards developing a final, high-fidelity prototype after background research, user testing, and decision iteration. 
-            From researching to sketching to prototyping, I learned about contemporary perspectives on interaction design through both discussion of readings in lectures and peer collaboration.
-            <p>
-        </div>
-       </div>
-    </main>
-      <footer>
-        <p>University of Michigan School of Information <br/>
+    <!-- <div class = "landing-logo">
+      <img src="images/logo.png" alt="logo" id="logo"> </div> -->
+    <nav>
+        <li> <a href= "about.html"> About </a> </li>
+        <li> <a class ="current" href= "index.html"> Work  </a> </li>
+        <li> <a href= "photography.html "> Photography </a> </li>
+        <li> <a href= "resume.html "> Resume  </a> </li> 
+        <li> <a href= "contact.html "> Contact </a> </li>
+      </nav>
+      <div class = "landing-text">
+          <h1>Anandita Aggarwal</h1> 
+          <h2> UX Researcher | UX Designer  </h2>
+      </div>
+  </header>
+  
+
+  <main id=skip>
+
+    <h3>These are some of the UX Projects I have worked on</h3>
+      <body>
+
+        <div class = flip-card-container>
+        <div class="flip-card" tabindex="0">
+            <div class="flip-card-inner">
+              <div class="flip-card-front" style="width:300px; height:350px; align-items: center;">
+                <img src="images/refugees.jpg" alt="UX Research: Connecting resources for refugees" style="width:350px;height:350px;"> 
+              </div>
+              
+              <div class="flip-card-back" style="width:300px;height:350px;">
+                  <p>For this project, our client was Office of Global Michigan that 
+                    supports immigrant and refugee integration initiatives for the state.
+                    There are voids in the information that the Office of Global Michigan is collecting on refugee services.
+                    In order to provide better support, they need to find out how refugees are accessing mainstream services and the challenges they face when navigating the systems that host these services.</p>
+              </div>
+            
+            </div>
+          </div>
+          
+          <div class="flip-card" tabindex="0">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="images/system_design.png" alt="Systems Design: Paperless Receipts" style="width:350px;height:350px;"> 
+                  </div>
+                      <div class="flip-card-back" style="width:300px;height:350px;">
+                        <p> Receipts are a commonly overlooked part of a customer’s shopping experience, and often end up lost or in the garbage. 
+                          This makes returns, exchanges, and any other post transaction interactions more difficult for both the business and the consumers. 
+                          This project provides a solution to make Apple Pay more intuitive and seamless for both the consumer and the business by essentially eliminating paper receipts.</p>
+                      </div>
+                </div>
+              </div>
+              <div class="flip-card" tabindex="0">
+                  <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img src="images/safe_nab.jpg" alt="UX Design: Safety Nav" style="width:300px;height:350px">
+                      </div>
+
+                      <div class="flip-card-back" style="width:300px;height:350px;">
+                        <p>Travelling and navigating through an unfamiliar city solo wasn’t easy. 
+                            Seeing multiple crime alerts, and reading horror stories online made it difficult to predict which areas to avoid. 
+                            Therefore, I decided to explore the area of travel safety.  
+                            I developed a mobile prototype using the fundamental readings about the design process and best practices.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  </main>
+
+  <footer>
+      <div class="Email">
+          <!-- Email icon -->
+          <a href="mailto:aanandit@umich.edu" target="_blank" ><span>Email</span></a> 
+          </div>
+          <!--LinkedIn icon-->
+      <div class="LinkedIn">
+          <a href="https://www.linkedin.com/in/anandita-aggarwal-979053a4/" target="_blank"><span>LinkedIn</span> </a>
+      </div>
+      <div>
+          <p>University of Michigan School of Information <br/>
           &copy; Anandita Aggarwal</p>
-      </footer>
-     
-    </div>
+      </div>
   </body>
+</footer>
 </html>

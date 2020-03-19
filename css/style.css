@@ -1,128 +1,607 @@
 html{
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
+body {
+  /* height: 100%;
+  width: 100%; */
+  padding: 0;
+  margin: 0;
+}
+/* Skip to Main */
+a.skip {
+  background: #FFFFFF;
+  left: 0;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+  position: absolute;
+  top: -100px;
+  overflow: hidden;
+  color: #000000;
 }
 
-body{
-    background-color: #ddd;
-    font-size: 18px;
-    margin: 0;
-    padding: 0;
+/* https://accessibility.psu.edu/skipnav/skiplinks/ */
+a.skip:focus, a.skip:active{
+  overflow: visible; 
+  top: 0; 
+  left:0;
+  text-align: center;
+  border: 2px solid #ff5783;
+  padding-left: 1px;
+  padding-right: 1px;
+}
+
+
+/* Nav Bar */
+nav li a {
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+nav .current{
+  color: #000000;
+  background: white;
+  text-decoration-line: underline; 
+}
+
+nav{
+  display: flex;
+  flex-direction: row; 
+  /* flex-direction: column;  */
+  height: 100%;
+  justify-content: center;
+  position: relative;
+  text-align: right;
+  z-index: 3;
+  padding: 20px 0; 
+  text-align: left;
   }
-
-  h1{
-    font-size: 50px;
-    line-height: 1;
-    padding: 50px 0;
-    text-align: center;
-}
-nav li{
+  
+  nav li{
     display:inline;
     padding-right:20px;
   }
 
-nav a{
+  nav ul{
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    list-style: none;
+  } 
+
+  /* nav ul li{
+    padding: 10px;
+    justify-content: center;
+    list-style: none;
+  } */
+  /* nav ul li:hover{
+    padding: 20px 10px;
+    background-color: red;
+    transition: 0.9s;
+    justify-content: center;
+    list-style: none;
+  }
+
+ */
+
+  nav a{
+    background: #ffcf81;
+    text-decoration: none;
+    color: #fff;
+    margin-bottom: 0;
+    padding: 16px 24px;
     color: black;
     font-weight: bold;
-    text-decoration: none; 
+    font-size: 18px; 
+    font-family: PT Mono,monospace, Helvetica, Arial, sans-serif;
+    /* font-family:  Helvetica, Arial, sans-serif;  */
+  }
+  
+  nav a:hover{
+    padding: 20px 10px;
+    background-color:white;
+    transition: 0.9s;
+    justify-content: center;
+    list-style: none;
+    /* text-decoration: underline; */
   }
 
-nav a:hover{
-    color: blue;
-    text-decoration: underline;
-  }
-  .skip a{
-    background: white;
-    left: 0;
-    padding: 6px;
-    -webkit-transition: top 1s ease-out;
-    transition: top 1s ease-out;
-    z-index: 1;
-    position: absolute;
-    top:-40px
-  }
-
-
-img{
-    height: 300px;
-    align-items: center;
+/* Header */
+h1{
+  color: #000000;
+  text-align: center;
+  font-family: PT Mono,monospace, Helvetica, Arial, sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-bottom: 1px;
 }
 
-footer{
-    background-color: #2e1114;
-    color: white;
-    grid-column: 1 / -1;  /*Can you explain what this does?*/
-    grid-row: 7 / auto;   /*Can you rewrite it?*/
-    padding-top: 20px;
+h2{
+  font: sans-serif;
+  font-size:20px;
+  text-align: center;
+  line-height: 1.8rem;
+}
+
+h3{
+  font: sans-serif;
+  font-size:15px;
+  text-align: center;
+  line-height: 1.8rem;
+}
+
+header img {
+  padding-left: 50px;
+  padding-bottom: 40px;
+  padding-top: 25px;
+  height: 60px;
+  width: 60px;
+}
+
+/* body */
+
+body{
+  background-color: #fff;
+  font-family: PT Mono,monospace, Helvetica, Arial, sans-serif;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+/* About Page */
+.parallax-container {
+  background-image: url('../images/travel_image.jpg');
+  min-height:500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  margin: 10px 5px 15px;
+}
+
+.content-parallax{
+  background-color: #fff;
+  font-size:25px;
+  margin:10px 40px 15px;
+}
+ /* Work Page */
+/* #page1 .gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 60px;
+    padding-bottom: 20px;
+} */
+ .front > img {
+  width: 300px;
+  height: 300px;
+  padding-bottom: 20px;
+}
+
+.flip-card-container{
+  display: flex;
+  flex: 1 0 31%;
+  /* flex-wrap: wrap;
+  position: relative;
+  align-self: center;
+  align-items:center; */
+  /* flex-direction: row; */
+  padding: 10px;
+  flex-grow: 0;
+  /* justify-content: center; */
+
+  /* position: relative;
+  justify-self: center; */
+  /* flex-direction: column; */
+  /* justify-content: space-between;
+  justify-content: space-around; */
+  /* align-self: center;
+  justify-content: center; */
+/* 
+  width: 450px;
+  height: 350px; */
+  /* border: 1px solid #cccccc; */
+  /* perspective: 1000px; */
+}
+.flip-card-front > img{
+  width:100px;
+  height:100px
+  
+}
+
+.flip-card {
+  /* align-self: center; */
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  background-color: transparent;
+  perspective: 1000px;
+  margin: 0 auto;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #bbb;
+  width: 100%;
+  height: 100%;
+  color: black;
+  transform: rotateY(180deg);
+}
+
+
+div {
+  display: block;
+}
+
+/* Contact Form */
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  /* font-smoothing: antialiased; */
+  text-rendering: optimizeLegibility;
+}
+
+#contact body {
+  font-weight: 100;
+  font-size: 12px;
+  line-height: 30px;
+  color: #777;
+  background: #ffffff;
+}
+
+.container {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea,
+#contact button[type="submit"] {
+  font: 400 12px/16px PT Mono, monospace, Helvetica, Arial, sans-serif;
+}
+
+#contact {
+  background: #F9F9F9;
+  padding: 25px;
+  margin: 150px 0;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+#contact h3 {
+  display: block;
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+#contact h4 {
+  margin: 5px 0 15px;
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+fieldset {
+  border: medium none !important;
+  margin: 0 0 10px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+}
+
+#contact input[type="text"]:hover,
+#contact input[type="email"]:hover,
+#contact input[type="tel"]:hover,
+#contact input[type="url"]:hover,
+#contact textarea:hover {
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -moz-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+  border: 1px solid #aaa;
+}
+
+#contact textarea {
+  height: 100px;
+  max-width: 100%;
+  resize: none;
+}
+
+#contact button[type="submit"] {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: #ffcf81;
+  color: #000000;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+#contact button[type="submit"]:hover {
+  background: #ffffff;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#contact button[type="submit"]:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.copyright {
+  text-align: center;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  outline: 0;
+  border: 1px solid #aaa;
+}
+
+::-webkit-input-placeholder {
+  color: #888;
+}
+
+:-moz-placeholder {
+  color: #888;
+}
+
+::-moz-placeholder {
+  color: #888;
+}
+
+:-ms-input-placeholder {
+  color: #888;
+}
+
+/* Resume */
+
+*, *::before, *::after { box-sizing: inherit; } 
+
+
+a {
+	color: #ffffff;
+	text-decoration: none;
+	position: relative;
+}
+
+
+/* //LAYOUT */
+.wrap {
+	max-width: 1200px;
+	margin: 1rem;
+	display: grid;
+	grid-gap: 1rem;
+	grid-template-areas:
+		"id"
+		"statement"
+		"connect"
+		"experience"
+		"skills";
+
+}
+
+
+.id {
+	grid-area: id;
+}
+
+.statement {
+	grid-area: statement;
+}
+
+.experience {
+	grid-area: experience;
+	
+}
+
+.skills {
+	grid-area: skills;
+}
+	
+
+/* Gallery */
+
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  display: inline-block;
+  /* position: absolute; */
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+      width: 49.99999%;
+      margin: 6px 0;
+    }
+    nav {
+      display:grid;
+      grid-column: 1fr 1fr;
+      padding: 20px;
+      justify-content: center;
+    } 
+    nav a {
+      display:grid;
+      grid-column: 1fr 1fr;
+      padding: 20px;
+      justify-content: center;
+    } 
+  }
+  
+  @media only screen and (max-width: 500px) {
+    nav {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: space-between; 
+    } 
+    nav a {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: space-between; 
+    }
+    .responsive {
+      width: 100%;
+    }
+  
+    .clearfix:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+
+
+/* @media screen and (max-width: 768px) and (min-width: 600px){
+  nav {
+    display: flex;
+    flex-direction: row;
     text-align: center;
-  }
+    display:grid;
+    grid-column: 1fr 1fr;
+    padding: 20px;
+    justify-content: center;
+  } 
+@media screen and (min-width: 320px){
+  nav {
+    display: flex;
+    flex-direction: row;
+    /* height: 230px; */
+    /* text-align: center;
+  } */ 
 
-  nav{
-    background-color: #ddd;
-    padding: 20px 0; 
-    text-align: left;
-    grid-column: 1 / -1;
-    grid-row: 1 / span 1;
-    /*Your code here*/
-    /*Span the top row*/
+@media screen and  (prefers-reduced-motion: reduce){
+    #h1{
+      animation: none !important;
+    }
   
-  }
-
-  header{
-    background-color: #64485C;
-    background-image: url("../images/header.jpg");
-    background-attachment: fixed; /* Parallax effect */     
-    background-position: center;  /* Parallax effect */
-    background-repeat: no-repeat; /* Parallax effect */
-    background-size: cover;       /* Parallax effect */
-    color:#adadad;
-    height: 200px;                /* Parallax effect */
-    /* Your code here */
-    /* Set background-image to header.jpg in the images folder */
-    /* Span one row */
-    grid-column: 1/-1;
-    /* /* Spans all of the columns. */
-    grid-row: 2 /span 1;
-  /* Begins on 2nd row and spans 1 row.*/ 
-  /* Header uses header.jpg as a non-repeating*/
-  }
-
-  container{
-    display: grid;
-    align-content: center;
-    grid-template-columns: 400px 400px;
-    grid-template-rows: 30px 100px;
-    grid-row-gap:25px;
-    /*Your code here  */
-    /* See documentation for mobile view */
-  }
-     .img-one, .img-two, .img-three, .img-four{ 
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      align-items: center;
-    
-      grid-column: 2 /span 1; 
-      grid-row: 3/span 1;
-  }
-
-     /* .img-one, .img-two, .img-three, .img-four{
-     grid-column: 1/-1;
-     max-height: 700px; */
-     /* overflow: hidden; */
-  }
+    a.skip{
+        -webkit-transition: none !important;
+        transition: none !important; 
+      }
   
-
-  @media all and (min-width: 800px){
-
-    .container{
-      display: grid;
-        grid-template-columns: 50px auto 50px;
-      /* grid-template-columns: 50px auto 500px auto 50px; */
-
-      /* grid-template-rows: 70px 400px 400px 400px 400px 400px 100px; */
-    /*Your code here */
-    /* See documentation for desktop view */ 
-    /* Five columns: 50px, auto, 500px, auto, and  50px
-  Seven rows: 70px, 400px, 400px, 400px, 400px, 400px, and 100px.  */
+    html{
+        scroll-behavior: auto;
+    }
+  
+    /* #page1 .card:hover{
+        transform: none !important;
+        transition: none !important; */
   }
+
+
+
+
+/* Footer */
+footer{
+  display: flex;
+  bottom:0;
+  position: absolute;
+  flex-direction:row;
+  position: absolute;
+  margin-top: auto;
+  left: 0;
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+footer p{
+  text-align: left;
+  padding-left: 50px;
+  padding-top: 10px;
+}
+
+footer .Email{
+  color: white;
+  padding-right: 50px;
+}
+footer .LinkedIn{
+  color: white;
+  padding-right: 50px;
 }
