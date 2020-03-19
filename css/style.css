@@ -15,14 +15,14 @@ a.skip {
   transition: top 1s ease-out;
   z-index: 1;
   position: absolute;
-  top: -100px;
+  top: -200px;
   overflow: hidden;
   color: #000000;
 }
 
 /* https://accessibility.psu.edu/skipnav/skiplinks/ */
 a.skip:focus, a.skip:active{
-  overflow: visible; 
+  /* overflow: visible;  */
   top: 0; 
   left:0;
   text-align: center;
@@ -154,7 +154,7 @@ body{
 /* About Page */
 .parallax-container {
   background-image: url('../images/travel_image.jpg');
-  min-height:800px;
+  min-height:500px;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -191,16 +191,13 @@ body{
   display: flex;
   flex: 1 0 31%;
   /* flex-wrap: wrap; */
-  position: relative;
+  /* position: relative; */
   align-self: center;
   align-items:center; 
   /* flex-direction: row; */
   padding: 10px;
   flex-grow: 0;
-  /* justify-content: center; */
-
-  /* position: relative;
-  justify-self: center; */
+  justify-self: center; 
   /* flex-direction: column; */
   /* justify-content: space-between;
   justify-content: space-around; */
@@ -212,11 +209,15 @@ body{
   /* border: 1px solid #cccccc; */
   /* perspective: 1000px; */
 }
-
+/* .flip-card-front > img{
+  width:100px;
+  height:100px
+} */
 
 .flip-card {
-  /* align-self: center; */
-/*   width: 100%;
+  align-self: center; 
+  /* position: absolute;  */
+  /* width: 100%;
   height: 100%; */
   transform-style: preserve-3d;
   transition: transform 1s;
@@ -226,7 +227,7 @@ body{
 }
 
 .flip-card-inner {
-  position: relative;
+  position: static; 
   width: 100%;
   height: 100%;
   text-align: center;
@@ -243,7 +244,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  position: inherit;
+  /* position: inherit; */
   font-size: 1rem;
   border-radius: 0.5rem;
   backface-visibility: hidden;
