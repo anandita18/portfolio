@@ -140,11 +140,9 @@ h3{
 }
 
 header img {
-  padding-left: 50px;
-  padding-bottom: 40px;
-  padding-top: 25px;
   height: 60px;
   width: 60px;
+  margin:20px;
 }
 
 /* body */
