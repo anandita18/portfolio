@@ -154,7 +154,7 @@ body{
 /* About Page */
 .parallax-container {
   background-image: url('../images/travel_image.jpg');
-  min-height:500px;
+  min-height:800px;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
