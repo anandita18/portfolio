@@ -212,11 +212,7 @@ body{
   /* border: 1px solid #cccccc; */
   /* perspective: 1000px; */
 }
-.flip-card-front > img{
-  width:100px;
-  height:100px
-  
-}
+
 
 .flip-card {
   /* align-self: center; */
