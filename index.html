@@ -4,16 +4,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>Homepage</title>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161220864-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-161220864-1');
-    </script>
+    <title>Homepage</title>    
   </head>
   <body id = "homepage">
     <a class="skip" href="#main">Skip to Main Content</a>
@@ -21,14 +12,14 @@
     <div class = "landing-logo">
       <img src="images/logo.png" alt="logo" id="logo"> </div> 
     <nav>
-      <ul>
+      <ul class = nav-bar>
         <li> <a href= "about.html"> About </a> </li>
         <li> <a class ="current" href= "index.html"> Work  </a> </li>
         <li> <a href= "photography.html "> Photography </a> </li>
         <li> <a href= "resume.html "> Resume  </a> </li> 
         <li> <a href= "contact.html "> Contact </a> </li>
       </ul>
-      </nav>
+    </nav>
       <div class = "landing-text">
           <h1>Anandita Aggarwal</h1> 
           <h2> UX Researcher | UX Designer  </h2>
@@ -39,42 +30,46 @@
 
     <h3>These are some of the UX Projects I have worked on</h3>
 
-        <div class = flip-card-container>
+        <div id = flip-card-container>
         <div class="flip-card" tabindex="0">
-            <div class="flip-card-inner">
-              <div class="flip-card-front" style="width:300px; height:350px; align-items: center;">
-                <img src="images/refugees.jpg" alt="UX Research: Connecting resources for refugees" style="width:350px;height:350px;"> 
+              <div class="flip-card-front"> 
+              <!-- <div class="flip-card-front" style="width:300px; height:350px; align-items: center;"> -->
+                <img id =img src="images/refugees.jpg" alt="UX Research: Connecting resources for refugees"> 
               </div>
               
-              <div class="flip-card-back" style="width:300px;height:350px;">
-                  <p>For this project, our client was Office of Global Michigan that 
-                    supports immigrant and refugee integration initiatives for the state.
-                    There are voids in the information that the Office of Global Michigan is collecting on refugee services.
+              <div class="flip-card-back">
+                  <b class="title">Connecting resources for refugees</b><br>
+                  <i class="desc"> User Experience Research</i>
+                  <p class="text">For this project, our client was Office of Global Michigan that supports immigrant and refugee integration initiatives for the state. There are voids in the information that the Office of Global Michigan is collecting on refugee services. 
                     In order to provide better support, they need to find out how refugees are accessing mainstream services and the challenges they face when navigating the systems that host these services.</p>
-              </div>
+
+
             
             </div>
         </div>
-          
+
           <div class="flip-card" tabindex="0">
-              <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <img src="images/system_design.png" alt="Systems Design: Paperless Receipts" style="width:350px;height:350px;"> 
+                    <img id= img1 src="images/system_design.png" alt="Systems Design: Paperless Receipts"> 
                   </div>
-                      <div class="flip-card-back" style="width:300px;height:350px;">
-                        <p> Receipts are a commonly overlooked part of a customer’s shopping experience, and often end up lost or in the garbage. 
-                          This makes returns, exchanges, and any other post transaction interactions more difficult for both the business and the consumers. 
-                          This project provides a solution to make Apple Pay more intuitive and seamless for both the consumer and the business by essentially eliminating paper receipts.</p>
+                      <div class="flip-card-back">
+                        <b class="title">Paperless Receipts</b><br>
+                        <i class="desc"> Systems Design</i>
+                        <p class="text">Receipts are a commonly overlooked part of a customer’s shopping experience, and often end up lost or in the garbage. 
+                            This makes returns, exchanges, and any other post transaction interactions more difficult for both the business and the consumers. 
+                            This project provides a solution to make Apple Pay more intuitive and seamless for both the consumer and the business by essentially eliminating paper receipts.</p>
+
                       </div>
                 </div>
               </div>
               <div class="flip-card" tabindex="0">
-                  <div class="flip-card-inner">
                       <div class="flip-card-front">
-                        <img src="images/safe_nab.jpg" alt="UX Design: Safety Nav" style="width:300px;height:350px">
+                        <img id = img2 src="images/safe_nab.jpg" alt="UX Design: Safety Nav">
                       </div>
 
-                      <div class="flip-card-back" style="width:300px;height:350px;">
+                      <div class="flip-card-back">
+                      <b class="title">Safety Navigator</b><br>
+                      <i class="desc"> User Experience Design</i>
                         <p>Travelling and navigating through an unfamiliar city solo wasn’t easy. 
                             Seeing multiple crime alerts, and reading horror stories online made it difficult to predict which areas to avoid. 
                             Therefore, I decided to explore the area of travel safety.  
