@@ -431,6 +431,7 @@ div.wrapper{
 	margin: 5rem;
 	display: grid;
   grid-gap: 3rem;
+  align-items: center;
   /* grid-template-columns: 1fr 1fr; */
 	grid-template-areas:
     "id"     "id"  
