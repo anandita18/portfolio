@@ -69,20 +69,7 @@ nav{
     list-style: none;
   } 
 
-  /* nav ul li{
-    padding: 10px;
-    justify-content: center;
-    list-style: none;
-  } */
-  /* nav ul li:hover{
-    padding: 20px 10px;
-    background-color: red;
-    transition: 0.9s;
-    justify-content: center;
-    list-style: none;
-  }
 
- */
 
   nav a{
     background: #ffcf81;
@@ -416,8 +403,6 @@ fieldset {
 
 
 a {
-	color: #ffffff;
-	text-decoration: none;
 	position: relative;
 }
 
