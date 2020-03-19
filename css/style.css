@@ -404,6 +404,7 @@ fieldset {
 
 a {
 	color: #ffffff;
+	text-decoration: none; 
 	position: relative;
 }
 
