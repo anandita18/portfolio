@@ -190,10 +190,10 @@ body{
 .flip-card-container{
   display: flex;
   flex: 1 0 31%;
-  /* flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   position: relative;
   align-self: center;
-  align-items:center; */
+  align-items:center; 
   /* flex-direction: row; */
   padding: 10px;
   flex-grow: 0;
@@ -247,7 +247,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  position: inherit;
   font-size: 1rem;
   border-radius: 0.5rem;
   backface-visibility: hidden;
@@ -482,9 +482,6 @@ div.desc {
   text-align: center;
 }
 
-* {
-  box-sizing: border-box;
-}
 
 .responsive {
   padding: 0 6px;
@@ -578,28 +575,34 @@ div.desc {
 
 
 /* Footer */
+
+
 footer{
-  display: flex;
-  position: relative;
-  margin-top: auto;
-  /* left: 0; */
-  margin-top: auto;
-  width: 100%;
+  bottom: 0px;
+  font-family: 'Helvetica Neue', sans-serif;
+  color: white;
+  font-size: 0.8rem;
+  text-align: center;
+  background-color:  #040404;
+
+}
+
+.centered{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: #000000;
   color: #ffffff;
 }
 
-footer p{
-  text-align: left;
-  padding-left: 50px;
-  padding-top: 10px;
+.copyright{
+width: 100%;
+margin-top: 30px;
+margin-right: auto;
+margin-left: auto;
+text-align: center;
+line-height: 1.3;
+padding: 20px 0;
 }
 
-footer .Email{
-  color: white;
-  padding-right: 50px;
-}
-footer .LinkedIn{
-  color: white;
-  padding-right: 50px;
-}
